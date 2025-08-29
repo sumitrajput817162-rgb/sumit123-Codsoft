@@ -1,0 +1,37 @@
+import java.util.Random;
+import java.util.*;
+class GuessNumber {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        Random r=new Random();
+        int score=0;
+        while(true){
+        int guessnum;
+        int num=r.nextInt(101);
+        int attempt=0;
+        System.out.println("numbers between 1 to 100:");
+while(true){
+            System.out.println("enter guessed number:");
+            guessnum=sc.nextInt();
+            attempt++;
+            if(guessnum>num)
+            {
+                System.out.println("high number is guessed");
+
+            }
+           else if(guessnum<num){
+                System.out.println("low number is guessed");
+            } else {
+                System.out.println("correct number is guessed");
+                break;
+            }
+        if(attempt==6){
+            System.out.println("guess is over");
+        break;}
+        }
+            System.out.println("want to play again");
+char ch=sc.next().charAt(0);
+if(ch=='n'||ch=='N'){
+    break;
+}
+    }}}
